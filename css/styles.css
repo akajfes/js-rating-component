@@ -1,0 +1,70 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --lt-grey: hsl(217, 12%, 63%);
+    --md-grey: hsl(216, 12%, 54%);
+    --blue: #262d37;
+    --dk-blue: #202731;
+    --vdk-blue: hsl(216, 12%, 8%);
+    --orange: hsl(25, 97%, 53%);
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    background-color: var(--vdk-blue);
+    color: var(--lt-grey);
+    font-size: 15px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: var(--white);
+    font-weight: 400;
+    padding: 15px;
+}
+
+.rating-end {
+    visibility: hidden;
+}
+
+/* + + + main + + + */
+section {
+    width: 328px;
+    background-color: var(--dk-blue);
+    border-radius: 12px;
+}
+
+.star-circle,
+.number  {
+    display: inline-block;
+    padding: 16px;
+    background-color: var(--blue);
+    border-radius: 30px;
+}
+
+.number-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.number {
+    padding: 12px 20px;
+}
+
+.number:first-of-type {
+    padding: 12px 22px;
+}
+
+
+.star-circle svg {
+    width: 17px;
+}
+
+
+.inner-container {
+    padding: 15px;
+}
