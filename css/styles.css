@@ -5,36 +5,39 @@
     --blue: #262d37;
     --dk-blue: #202731;
     --vdk-blue: hsl(216, 12%, 8%);
-    --orange: hsl(25, 97%, 53%);
+    --orange: #fb7413;
 }
 
 body {
     font-family: 'Overpass', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     background-color: var(--vdk-blue);
     color: var(--lt-grey);
     font-size: 15px;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
+
 
 h1 {
     color: var(--white);
     font-weight: 400;
-    padding: 15px;
+    padding-bottom: 10px;
+    font-size: 24px;
 }
 
-.hidden {
-    visibility: hidden;
+.inner-container {
+    padding: 24px;
 }
 
 /* + + + main + + + */
 section {
-    width: 328px;
-    background-color: var(--dk-blue);
-    border-radius: 12px;
+    min-width: 328px;
+    background: rgb(35,42,50);
+    background: radial-gradient(at top, rgba(35,42,50,1) 0%, rgba(26,31,37,1) 100%);
+    border-radius: 24px;
+    position: absolute;
+    top: 50%; 
+    right: 50%;
+    transform: translate(50%,-50%);
 }
 
 .star-circle,
@@ -43,6 +46,7 @@ section {
     padding: 16px;
     background-color: var(--blue);
     border-radius: 100%;
+    margin-bottom: 24px;
 }
 
 .number-container {
@@ -51,12 +55,45 @@ section {
     align-items: center;
 }
 
+.rating-txt {
+    margin-bottom: 24px;
+}
+
 .number {
-    padding: 12px 18px 10px 18px;
+    padding: 14px 20px 12px 20px;
+}
+
+.number:hover{
+    cursor: pointer;
+    background-color: var(--lt-grey);
+    color: white;
+}
+
+.number:active,
+.active-button,
+.submit-btn {
+    color:hsl(0, 0%, 100%);
+    background-color:hsl(25, 97%, 53%);
+}
+
+.submit-btn {
+    width: 100%;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 25px;
+    line-height: 2.6;
+    letter-spacing: 2px;
+}
+
+.submit-btn:hover,
+.submit-btn:active {
+    cursor: pointer;
+    background-color:hsl(0, 0%, 100%);
+    color:hsl(25, 97%, 53%);
 }
 
 .number:first-of-type {
-    padding: 12px 20px 10px 20px;
+    padding: 14px 22px 12px 22px;
 }
 
 
@@ -65,10 +102,34 @@ section {
 }
 
 
-.inner-container {
-    padding: 15px;
+.rating-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
 }
 
-.rating-end {
-    text-align: center;
+
+.container-click {
+    color: var(--orange);
+    background-color: var(--blue);
+    line-height: 2;
+    padding: 0 1rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.end-txt {
+    padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 500px){
+    section {
+        width: 410px;
+    }
+
+    .inner-container {
+        padding: 35px;
+    }
 }
