@@ -62,5 +62,5 @@ I still need extra practice with JS in terms of using for loops and making thing
 
 
 ## Author
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@akajfes](https://www.frontendmentor.io/profile/akajfes)
 - GitHub - [@akajfes](https://github.com/akajfes)
